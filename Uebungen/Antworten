@@ -1,0 +1,39 @@
+    
+    ░█████╗░███╗░░██╗████████╗░██╗░░░░░░░██╗░█████╗░██████╗░████████╗███████╗███╗░░██╗
+    ██╔══██╗████╗░██║╚══██╔══╝░██║░░██╗░░██║██╔══██╗██╔══██╗╚══██╔══╝██╔════╝████╗░██║
+    ███████║██╔██╗██║░░░██║░░░░╚██╗████╗██╔╝██║░░██║██████╔╝░░░██║░░░█████╗░░██╔██╗██║
+    ██╔══██║██║╚████║░░░██║░░░░░████╔═████║░██║░░██║██╔══██╗░░░██║░░░██╔══╝░░██║╚████║
+    ██║░░██║██║░╚███║░░░██║░░░░░╚██╔╝░╚██╔╝░╚█████╔╝██║░░██║░░░██║░░░███████╗██║░╚███║
+    ╚═╝░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░░░░╚═╝░░░╚═╝░░░╚════╝░╚═╝░░╚═╝░░░╚═╝░░░╚══════╝╚═╝░░╚══╝
+    
+    
+    
+    ▄█  Was sehen Sie? 
+    ░█  PHP
+
+    
+    ▀█  Was bedeutet das -S vom PHP-Befehl?
+    █▄  Server
+
+     
+    ▀█  Ändert sich der Counter nachdem die erste Zeile auskommentiert wurde?
+    ▀█  Nein, es funktioniert gar nicht!
+    ▀▀
+    
+    █░█ Wieso ändert er sich nicht?
+    ▀▀█ Die Variable $anz.. wird immer wieder auf 1 gesetzt. 
+        
+    
+    █▀  Gehen Sie den Code durch und überlegen Sie Sich was auf jeder Zeile geschieht.
+    ▄█  session_start();                                        //eine neue Session wird gestartet
+
+        $anzahl_aufrufe = 1;                                    //die Variable $anzahl_aufrufe wird auf 1 gesetzt
+        if (isset($_SESSION['anzahl_aufrufe'])) {               //Wenn die Variable $_SESSION einen wert hat, wird etwas ausgeführt
+            $anzahl_aufrufe = $_SESSION['anzahl_aufrufe'];      //der Variable $anzahl_aufrufe wird der Wert der Variable $_SESSION übergeben
+        }
+
+    █▄▄ Rufen Sie die Datei so auf dass auch das Alter ausgegeben wird.
+    █▄█ Mit age=17
+        
+    
+    7.  
