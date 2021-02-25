@@ -38,7 +38,13 @@ class DB
     }
 
     public function commitTransaction() {
+        if($isTransactionRunning == true) {
         $this->pdo->exec("COMMIT");
+        $this->$isTransactionRunning = false;
+    }
+    else{
+        throw new Exception("Bitte zuerst Transaction starten");
+    }
     }
 
     public function rollbackTransaction() {
