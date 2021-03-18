@@ -6,14 +6,14 @@
 
     $mode = $_GET['mode'];
     if($mode = 'plus') {
-        echo($x + $y)
+        echo($x + $y);
     };
     elseif($mode = 'minus') {
-        echo($x-$y)
+        echo($x-$y);
     };
     elseif($mode = 'multi') { 
         echo($x*$y)
     };
     elseif($mode = 'div') {
-        echo($x/$y)
+        echo($x/$y);
     };
