@@ -27,7 +27,7 @@ class DB
         return self::$instance;
     }
 
-    public static function startTransaction() {
+    public function startTransaction() {
         if($isTransactionRunning == false) {
         $this->pdo->exec("START TRANSACTION");
         $this->$isTransactionRunning = true;

@@ -11,7 +11,7 @@ body {
 
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: #000000;
+	background-color: #eeeeee;
 }
 
 
@@ -21,7 +21,9 @@ body {
 	justify-content: space-around;
 	flex-wrap: wrap;
 	height: 100vh;
-	width: initial;
+	width: 80%;
+	
+
 }
 
 
@@ -53,7 +55,7 @@ h3 {
 
 
 article{
-	background-color: rgb(85, 85, 85);
+	background-color: rgba(190, 190, 190, 0.295);
 	margin-top: 30px;
 	text-align: center;
 	display: block;

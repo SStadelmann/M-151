@@ -8,6 +8,7 @@
 <body>
     <h2>Our Products</h2>
     <a class="link" href="/login">Login / Sign Up</a>
+    <a style="margin-left: 2rem" class="link" href="/cart">Warenkorb</a>
     <div class="display-products">
         @foreach ($products as $product)
         <article>
@@ -16,7 +17,7 @@
                 <h3 class="info">{{ $product->name }}</h3>
                 <h4 class="info">CHF {{ $product->price }}</h4>
             </a>
-            <button class="buy--btn ">ADD TO CART</button>
+            <button class="buy--btn " href="/addProduct/{{ $product->id }}">ADD TO CART</button>
 </article>
                 @endforeach
     <div>
