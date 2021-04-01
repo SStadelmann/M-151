@@ -18,7 +18,7 @@ class WarenkorbController extends Controller
         $product = \App\Models\Product::all()->where('id', $productId)->first();
         array_push($basket, $product);
         session()->put('basket', $basket);
-        return redirect('/cart');
+        return redirect('/warenkorb');
     }
 
     public function basket()

@@ -6,7 +6,7 @@
 </head>
 <section class="product">
     <a class="link" href="/login">Login / Sign Up</a>
-    <a style="margin-left: 2rem" class="link" href="/cart">Warenkorb</a>
+    <a style="margin-left: 2rem" class="link" href="/warenkorb">Warenkorb</a>
     <div class="product__photo">
         <div class="photo-container">
             <div class="photo-main">

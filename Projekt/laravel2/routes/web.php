@@ -18,7 +18,7 @@ Route::match(['get', 'post'], '/login', [\App\Http\Controllers\CustomerControlle
 Route::match(['get', 'post'], '/register', [\App\Http\Controllers\CustomerController::class, 'register'])->name('register');
 Route::get('/user/{id}/orders', [\App\Http\Controllers\CustomerController::class, 'orders'])->name('UserOrders');
 Route::get('/addProduct/{id}', [\App\Http\Controllers\WarenkorbController::class, 'addProduct']);
-Route::get('/cart', [\App\Http\Controllers\WarenkorbController::class, 'basket']);
+Route::get('/warenkorb', [\App\Http\Controllers\WarenkorbController::class, 'basket']);
 Route::get('/checkout', [\App\Http\Controllers\CheckoutController::class, 'checkout']);
 Route::get('/sendorder', [\App\Http\Controllers\CheckoutController::class, 'sendOrder']);
 

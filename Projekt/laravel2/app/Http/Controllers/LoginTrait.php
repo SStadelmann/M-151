@@ -8,41 +8,41 @@ trait LoginTrait
 {
     public function checkLogin()
     {
-        if (session()->get('userId')) {
+        if (session()->get('customerId')) {
             return true;
         } else {
             return false;
         }
     }
 
-    public function createUser($props)
+    public function createcustomer($props)
     {
 
-        $user = new \App\Models\users;
+        $customer = new \App\Models\Customer;
 
-        $user->email = $props->email;
-        $user->password =  Hash::make($props->password);
-        $user->first_name = $props->firstname;
-        $user->last_name = $props->lastname;
-        $user->street = $props->street;
-        $user->city = $props->city;
-        $user->zip = $props->zip;
-        $user->phone = $props->phone;
+        $customer->email = $props->email;
+        $customer->password =  Hash::make($props->password);
+        $customer->first_name = $props->firstname;
+        $customer->last_name = $props->lastname;
+        $customer->street = $props->street;
+        $customer->city = $props->city;
+        $customer->zip = $props->zip;
+        $customer->phone = $props->phone;
 
-        if ($user->save()) {
-            $this->loginUser($props->email, $props->password);
+        if ($customer->save()) {
+            $this->logincustomer($props->email, $props->password);
             return true;
         } else {
             return false;
         }
     }
 
-    public function loginUser($email, $password)
+    public function logincustomer($email, $password)
     {
-        $user = \App\Models\users::all()->where('email', $email)->first();
+        $customer = \App\Models\customer::all()->where('email', $email)->first();
 
-        if (isset($user->password) && Hash::check($password, $user->password)) {
-            session()->put('userId', $user->id);
+        if (isset($customer->password) && Hash::check($password, $customer->password)) {
+            session()->put('customerId', $customer->id);
             return true;
         } else {
             return false;
